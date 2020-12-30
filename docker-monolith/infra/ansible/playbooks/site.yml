@@ -1,0 +1,21 @@
+---
+- hosts: all
+  become: true
+
+  tasks:
+    - name: Install pip
+      apt:
+        name: python3-pip
+        state: present
+
+    - name: Install docker-py
+      pip:
+        name: docker-py
+        state: present
+
+    - name: Create container
+      docker_container:
+        name: Reddit
+        image: scoff1k/otus-reddit:1.0
+        ports: "80:9292"
+

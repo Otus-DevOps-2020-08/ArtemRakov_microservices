@@ -4,6 +4,6 @@ build {
   ]
 
   provisioner "ansible" {
-    playbook_file = "playbooks/install_docker.yml"
+    playbook_file = "ansible/playbooks/install_docker.yml"
   }
 }

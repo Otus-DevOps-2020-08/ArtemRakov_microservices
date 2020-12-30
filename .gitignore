@@ -1,3 +1,8 @@
 docker-monolith/infra/key.json
 docker-monolith/infra/packer/variables.auto.pkrvars.hcl
+*.tfstate
+*.tfstate.*.backup
+*.tfstate.backup
+*.tfvars
+.terraform/
 
